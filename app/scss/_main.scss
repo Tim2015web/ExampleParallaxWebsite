@@ -1,0 +1,89 @@
+/*@media (max-width: 640px) {}*/
+
+.main {
+    .parallax {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        .title {
+            position: absolute;
+            font-size: 5em;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 2;
+
+            @media (max-width: 400px) {
+                font-size: 3em;
+            }
+        }
+
+        & img {
+            position: absolute;
+            min-width: 100%;
+            pointer-events: none;
+        }
+
+        .hill1 {
+            top: 0;
+        }
+
+        .hill2 {
+            left: 0;
+            width: 100%;
+        }
+
+        .hill3 {
+            right: 0;
+        }
+
+        .hill4 {
+            left: 0;
+        }
+
+        .hill5 {
+            right: 0;
+        }
+
+        .leaf {
+            top: 0;
+            right: 0;
+        }
+
+        .plant {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+    }
+
+    .sec {
+        position: relative;
+        background-color: #003329;
+        padding: 100px;
+        z-index: 5;
+
+        @media (max-width: 750px) {
+            padding: 40px;
+        }
+
+        & h2 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        & p {
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+    }
+}

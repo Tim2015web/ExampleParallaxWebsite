@@ -37,12 +37,12 @@ function fonts() {
 
 function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg', '!app/images/src/favicon.png'])
-        .pipe(newer('app/images'))
-        .pipe(avif({ quality: 50 }))
+        //.pipe(newer('app/images'))
+        //.pipe(avif({ quality: 50 }))
 
-        .pipe(src(['app/images/src/*.*', '!app/images/src/favicon.png']))
-        .pipe(newer('app/images'))
-        .pipe(webp())
+        //.pipe(src(['app/images/src/*.*', '!app/images/src/favicon.png']))
+        //.pipe(newer('app/images'))
+        //.pipe(webp())
 
         .pipe(src('app/images/src/*.*'))
         .pipe(newer('app/images'))
@@ -69,8 +69,8 @@ function scripts() {
         //'node_modules/jquery/docs/jquery.js',
         //'node_modules/swiper/swiper-bundle.js',
         'app/js/main.js'
-        //'app/js/*.js'
-        //'!app/js/main.min.js'
+        //'app/js/*.js',
+        //'!app/js/main.min.js',
         //'app/js/**/*.js'
     ])
         .pipe(concat('main.min.js'))
@@ -97,13 +97,12 @@ function watching() {
 
     watch(['app/scss/style.scss'], styles)
     watch(['app/images/src'], images)
-    //watch(['app/fonts/src'], fonts)
+    watch(['app/fonts/src'], fonts)
     watch(['app/js/main.js'], scripts)
     watch(['app/components/*', 'app/pages/*'], pages)
     watch(['app/*.html']).on('change', browserSync.reload);
-
-    //watch(['app/scss/**/*.scss'], styles);
-    //watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+    watch(['app/scss/**/*.scss'], styles);
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 }
 
 function cleanDist() {
@@ -117,7 +116,7 @@ function building() {
         '!app/images/**/*.html',
         'app/images/*.*',
         '!app/images/*.svg',
-        'app/images/sprite.svg',
+        //'app/images/sprite.svg',
         'app/fonts/*.*',
         'app/js/main.min.js',
         'app/*.html'
