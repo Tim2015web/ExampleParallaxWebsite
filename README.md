@@ -1,4 +1,4 @@
-# EExampleParallaxWebsite
+# ExampleParallaxWebsite
 
 [Show the project](https://tim2015web.github.io/ExampleParallaxWebsite/)
 
@@ -12,4 +12,4 @@ An example of a beautiful parallax effect for desktop. Educational layout based 
 
 ---
 
-<img src="screenshot.jpg" title="Screenshot1" alt="HTML"/>
+<img src="screenshot.jpg" title="Screenshot" alt="Screenshot"/>
