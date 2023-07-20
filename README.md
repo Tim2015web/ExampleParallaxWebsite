@@ -12,5 +12,4 @@ An example of a beautiful parallax effect for desktop. Educational layout based 
 
 ---
 
-<img src="screenshot1.jpg" title="Screenshot1" alt="HTML"/>
-<img src="screenshot2.jpg" title="Screenshot2" alt="HTML"/>
+<img src="screenshot.jpg" title="Screenshot1" alt="HTML"/>
